@@ -14,9 +14,7 @@ load_dotenv()
 # access to the values within the .ini file in use.
 config = context.config
 section = config.config_ini_section
-config.set_section_option(section, "DB_USER", os.getenv("DB_USER"))
-config.set_section_option(section, "DB_PASSWORD", os.getenv("DB_PASSWORD"))
-config.set_section_option(section, "DB_HOST", os.getenv("DB_HOST"))
+config.set_section_option(section, "BACKEND_DATABASE_URL_PYMYSQL", os.getenv("BACKEND_DATABASE_URL_PYMYSQL"))
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
